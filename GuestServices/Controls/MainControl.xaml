@@ -1,0 +1,49 @@
+﻿<UserControl x:Class="GuestServices.Controls.MainControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:GuestServices.Controls"
+             mc:Ignorable="d" Background="SlateGray"
+             d:DesignHeight="600" d:DesignWidth="400" FontSize="22">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        
+        <!-- Row 0 -->
+        <TextBlock FontSize="32" HorizontalAlignment="Center" Margin="0 10 0 10">Guest Services</TextBlock>
+
+        <!-- Row 1 -->
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+            <TextBlock x:Name="firstNameText">First name:</TextBlock>
+            <TextBox x:Name="firstNameTextBox" MinWidth="150" Margin="5 5"></TextBox>
+        </StackPanel>
+
+        <!-- Row 2 -->
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+            <TextBlock x:Name="lastNameText">Last name:</TextBlock>
+            <TextBox x:Name="lastNameTextBox" MinWidth="150" Margin="5 5"></TextBox>
+        </StackPanel>
+
+        <!-- Row 3 -->
+        <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+            <TextBlock x:Name="groupSizeText">Group size:</TextBlock>
+            <TextBox x:Name="groupSizeTextBox" MinWidth="150" Margin="5 5" ></TextBox>
+        </StackPanel>
+
+        <!-- Row 4 -->
+        <StackPanel Grid.Row="4" Orientation="Vertical" Margin="10">
+            <TextBlock x:Name="commentText">Comments:</TextBlock>
+            <TextBox x:Name="commentTextBox" MinWidth="175" Height="125" Margin="5 5" RenderTransformOrigin="0.502,0.133"></TextBox>
+        </StackPanel>
+        <!-- Row 5 -->
+        <Button x:Name="submitForm" Grid.Row="5" Margin="10" Padding="10" Width="150" Background="LightGray">Submit</Button>
+    </Grid>
+</UserControl>
